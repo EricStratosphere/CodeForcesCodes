@@ -1,3 +1,5 @@
+//Note to anyone viewing this code: I would not recommend using this solution as reference kay kuti kaajo HAHAHAHA
+//tanginang problema ni prolly the hardest i had to face sa CodeForces
 #include <stdio.h>
 int main() 
 {

@@ -2,11 +2,13 @@
 int main() 
 {
     int limiter, ctr=0;
+    //fuckthisproblem
     int counter1=0, counter2=0, counter3=0, counter4=0, store2=0, store3=0;
     scanf("%d", &limiter);
     int num[limiter], store=0;
     while(ctr<limiter)
     {
+        //TANGINANG PROBLEMAHA NI YAWAAAAAAAAAAAA
         scanf("%d", &num[ctr]);
         if (num[ctr]==1) 
         {

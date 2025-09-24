@@ -1,7 +1,8 @@
+//NOT YET SOLVED
+
 import java.util.*;
-    public class Boredom{
-     
-     
+    public class Boredom{    
+
     	public static void main(String[] args){
     		Scanner scanner = new Scanner(System.in);
     		int n = scanner.nextInt();
@@ -16,8 +17,7 @@ import java.util.*;
     			frequency[arr[i]]++;
     		}
     		Collections.sort(individualValues);
-    		
-    		     
+
     		int[] table = new int[frequency.length];
     		Arrays.fill(table, 0);
     		int firstAnswer = recurSolve(individualValues, frequency, table, 0);
@@ -31,7 +31,6 @@ import java.util.*;
     			return table[index];
     		int currentValue = individualValues.get(index) * frequency[individualValues.get(index)];
      
-     
     		int firstAnswer = currentValue;
     		int secondAnswer = currentValue;
     		int thirdAnswer = currentValue;
@@ -42,7 +41,6 @@ import java.util.*;
     			secondAnswer = currentValue + recurSolve(individualValues, frequency, table, index + 2);
     		if(index + 3 < individualValues.size())
     			thirdAnswer = currentValue + recurSolve(individualValues, frequency, table, index + 3);
-     
     		table[index] = Math.max(firstAnswer, Math.max(secondAnswer, thirdAnswer));
     		return table[index];
     	}

@@ -1,31 +1,32 @@
 //NOT YET SOLVED
 
 import java.util.*;
-    public class Boredom{    
+public class Boredom{    
 
-    	public static void main(String[] args){
-    		Scanner scanner = new Scanner(System.in);
-    		int n = scanner.nextInt();
-    		int[] arr = new int[n];
-    		for(int i = 0; i < n; i++){
-    			arr[i] = scanner.nextInt();
-    		}	
-    		ArrayList<Integer> individualValues = getIndividualValues(arr);
-    		int[] frequency = new int[Collections.max(individualValues).intValue() + 1];
-    		Arrays.fill(frequency, 0);
-    		for(int i = 0; i < n; i++){
-    			frequency[arr[i]]++;
-    		}
-    		Collections.sort(individualValues);
+    public static void main(String[] args){
+	    Scanner scanner = new Scanner(System.in);
+	    int n = scanner.nextInt();
+    	    int[] arr = new int[n];
+	    for(int i = 0; i < n; i++){
+	   	arr[i] = scanner.nextInt();
+    	    }	
+    	    ArrayList<Integer> individualValues = getIndividualValues(arr);
+    	    int[] frequency = new int[Collections.max(individualValues).intValue() + 1];
+    	    Arrays.fill(frequency, 0);
+    	    for(int i = 0; i < n; i++){
+    	    	frequency[arr[i]]++;
+	    }
 
-    		int[] table = new int[frequency.length];
-    		Arrays.fill(table, 0);
-    		int firstAnswer = recurSolve(individualValues, frequency, table, 0);
-    		int secondAnswer = individualValues.size() > 1 ? recurSolve(individualValues, frequency, table, 1) : 0;
+	    Collections.sort(individualValues);
+
+    	    int[] table = new int[frequency.length];
+    	    Arrays.fill(table, 0);
+    	    int firstAnswer = recurSolve(individualValues, frequency, table, 0);
+    	    int secondAnswer = individualValues.size() > 1 ? recurSolve(individualValues, frequency, table, 1) : 0;
     		
-    		System.out.println(Math.max(firstAnswer, secondAnswer));
+    	    System.out.println(Math.max(firstAnswer, secondAnswer));
+	
     	}
-     
     	public static int recurSolve(ArrayList<Integer> individualValues, int[] frequency, int[] table,int index){
     		if(table[index] > 0)
     			return table[index];

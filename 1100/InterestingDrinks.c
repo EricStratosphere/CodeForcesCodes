@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int binarySearch(int*, int, int);
-void countingSort(int*, int);
+void countingsort(int*, int);
 int main()
 {
     int stores;
@@ -11,7 +11,7 @@ int main()
     {
         scanf("%d", prices + i);
     }
-    countingSort(prices, stores);
+    countingsort(prices, stores);
     int days;
     scanf("%d", &days);
     for(int i = 0; i < days; i++){
@@ -21,7 +21,7 @@ int main()
     }
  
 }
-void countingSort(int* array, int size){
+void countingsort(int* array, int size){
     int largest = array[0];
     for(int i = 1; i < size; i++){
         if(*(array+i) > largest)
@@ -36,7 +36,7 @@ void countingSort(int* array, int size){
         *(newArr + *(array+i)) += 1;
     }
     int j = 0;
-    for(int i = 0; i < size; i++){
+    for(int i = 0; i < size; i++) {
         while(*(newArr+j) == 0)
             j++;
         *(array + i) = j;

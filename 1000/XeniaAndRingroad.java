@@ -3,7 +3,7 @@ public class XeniaAndRingroadAttemptDos {
     public static void main(String[] args){
         long ctr1 = 1; // 4 3 || 3 2 3
         int newlarge = 0; 
-        // 1 2 3 4 1 2 3 (4 || -1) // from eight it becomes seven,
+        // 1 2 3 4 1 2 3 (4 || -1) // frm eight it becomes seven,
         // 2 2 || 1 1
         // 
         Scanner input = new Scanner(System.in);
